@@ -4,8 +4,8 @@ Feature: Book Store Browsing
 	I want to buy a book
 	
 	Scenario: Search for book
-		Given a book
-		And has the following locations:
+		Givet a book
+		Och has the following locations:
 			| bookshelf | dewey decimal number | amazon link |
 			| 2 | 3235235235235235235| http://amazon.com/book/ehaerga |
 			| 235 | 35463636| http://amazon.com/book/wartgawryhaeth |

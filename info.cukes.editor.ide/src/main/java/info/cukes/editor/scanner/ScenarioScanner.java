@@ -44,7 +44,7 @@ public class ScenarioScanner extends RuleBasedScanner {
         IWordDetector keywordDetector = new IWordDetector() {
             @Override
             public boolean isWordStart(char c) {
-                if (c == 'G' || c == 'A' || c == 'W' || c == 'T' || c == 'B') {
+                if (c == 'G' || c == 'O' || c == 'N' || c == 'S' || c == 'M') {
                     return true;
                 }
 
@@ -58,11 +58,11 @@ public class ScenarioScanner extends RuleBasedScanner {
         };
 
         WordRule wordRule = new WordRule(keywordDetector);
-        wordRule.addWord("Given", keyword);
-        wordRule.addWord("And", keyword);
-        wordRule.addWord("When", keyword);
-        wordRule.addWord("Then", keyword);
-        wordRule.addWord("But", keyword);
+        wordRule.addWord("Givet", keyword);
+        wordRule.addWord("Och", keyword);
+        wordRule.addWord("När", keyword);
+        wordRule.addWord("Så", keyword);
+        wordRule.addWord("Men", keyword);
         rules[1] = wordRule;
 
         IWordDetector tableDetector = new IWordDetector() {

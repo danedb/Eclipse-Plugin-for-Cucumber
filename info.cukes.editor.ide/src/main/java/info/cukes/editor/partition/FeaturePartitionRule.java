@@ -17,7 +17,7 @@ import org.eclipse.jface.text.rules.MultiLineRule;
 
 public class FeaturePartitionRule extends MultiLineRule {
 
-    public static final String FEATURE_TEXT = "Feature";
+    public static final String FEATURE_TEXT = "Egenskap";
 
     public FeaturePartitionRule(IToken token) {
         super(FEATURE_TEXT, ScenarioPartitionRule.SCENARIO_TEXT, token, '#', true);

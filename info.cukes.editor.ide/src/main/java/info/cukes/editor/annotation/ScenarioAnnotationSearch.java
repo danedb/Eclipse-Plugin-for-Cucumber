@@ -45,11 +45,11 @@ import org.eclipse.jface.text.IRegion;
 import org.eclipse.jface.text.ITextViewer;
 import org.osgi.service.log.LogService;
 
-import cucumber.annotation.en.And;
-import cucumber.annotation.en.But;
-import cucumber.annotation.en.Given;
-import cucumber.annotation.en.Then;
-import cucumber.annotation.en.When;
+import cucumber.annotation.sv.Givet;
+import cucumber.annotation.sv.Men;
+import cucumber.annotation.sv.När;
+import cucumber.annotation.sv.Och;
+import cucumber.annotation.sv.Så;
 
 public class ScenarioAnnotationSearch implements IResourceChangeListener {
     private IJavaSearchScope scope;
@@ -59,11 +59,12 @@ public class ScenarioAnnotationSearch implements IResourceChangeListener {
     @SuppressWarnings("serial")
     private static Map<String, Class<? extends Annotation>> supportedAnnotations = new HashMap<String, Class<? extends Annotation>>() {
         {
-            put("Given", Given.class);
-            put("Then", Then.class);
-            put("When", When.class);
-            put("But", But.class);
-            put("And", And.class);
+            put("Givet", Givet.class);
+            put("Så", Så.class);
+            put("När", När.class);
+            put("Men", Men.class);
+            put("Och", Och.class);
+            
         }
     };
 

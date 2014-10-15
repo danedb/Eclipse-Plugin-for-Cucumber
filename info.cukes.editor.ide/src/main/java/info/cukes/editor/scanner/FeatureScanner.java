@@ -35,7 +35,7 @@ public class FeatureScanner extends RuleBasedScanner {
 
         rules[0] = new HighlightFullLineRule("#", null, comment);
         rules[1] = new HighlightFullLineRule("@", null, tag);
-        rules[2] = new HighlightFullLineRule("Feature:", null, feature);
+        rules[2] = new HighlightFullLineRule("Egenskap:", null, feature);
         
         setRules(rules);
     }

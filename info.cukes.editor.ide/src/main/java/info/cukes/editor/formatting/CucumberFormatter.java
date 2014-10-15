@@ -29,11 +29,11 @@ public class CucumberFormatter implements IFormattingStrategy, IFormattingStrate
     private Set<String> annotations = new HashSet<String>();
 
     public CucumberFormatter() {
-        annotations.add("Given ");
-        annotations.add("And ");
-        annotations.add("But ");
-        annotations.add("When ");
-        annotations.add("Then ");
+        annotations.add("Givet ");
+        annotations.add("Och ");
+        annotations.add("Men ");
+        annotations.add("När ");
+        annotations.add("Så ");
     }
 
     @Override
@@ -84,7 +84,7 @@ public class CucumberFormatter implements IFormattingStrategy, IFormattingStrate
     }
 
     private void formatFeature(MultiTextEdit allEdits) throws BadLocationException {
-        int featureIndex = originalString.indexOf("Feature:");
+        int featureIndex = originalString.indexOf("Egenskap:");
         int lastValidChar = indexOfPreviousChar(originalString, featureIndex);
 
         if (featureIndex > lastValidChar && lastValidChar >= 0) {
